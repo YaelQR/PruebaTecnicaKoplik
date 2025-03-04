@@ -1,0 +1,112 @@
+[
+    {
+      "id": 1,
+      "question": "¿Cuál es la función principal de los glóbulos rojos?",
+      "options": [
+        "Transportar oxígeno",
+        "Combartir infecciones",
+        "Coagular la sangre",
+        "Producir hormonas"
+      ],
+      "correctAnswer": "Transportar oxígeno"
+    },
+    {
+      "id": 2,
+      "question": "¿Qué órgano es responsable de producir insulina?",
+      "options": [
+        "Hígado",
+        "Páncreas",
+        "Riñón",
+        "Bazo"
+      ],
+      "correctAnswer": "Páncreas"
+    },
+    {
+      "id": 3,
+      "question": "¿Cuál es la enfermedad causada por la deficiencia de vitamina C?",
+      "options": [
+        "Raquitismo",
+        "Escorbuto",
+        "Anemia",
+        "Beriberi"
+      ],
+      "correctAnswer": "Escorbuto"
+    },
+    {
+      "id": 4,
+      "question": "¿Qué tipo de célula es responsable de la respuesta inmune adaptativa?",
+      "options": [
+        "Glóbulos rojos",
+        "Plaquetas",
+        "Linfocitos",
+        "Neutrófilos"
+      ],
+      "correctAnswer": "Linfocitos"
+    },
+    {
+      "id": 5,
+      "question": "¿Cuál es el hueso más largo del cuerpo humano?",
+      "options": [
+        "Fémur",
+        "Tibia",
+        "Húmero",
+        "Peroné"
+      ],
+      "correctAnswer": "Fémur"
+    },
+    {
+      "id": 6,
+      "question": "¿Qué enfermedad se caracteriza por la acumulación de placa en las arterias?",
+      "options": [
+        "Diabetes",
+        "Aterosclerosis",
+        "Artritis",
+        "Osteoporosis"
+      ],
+      "correctAnswer": "Aterosclerosis"
+    },
+    {
+      "id": 7,
+      "question": "¿Qué vitamina se sintetiza en la piel mediante la exposición al sol?",
+      "options": [
+        "Vitamina A",
+        "Vitamina C",
+        "Vitamina D",
+        "Vitamina E"
+      ],
+      "correctAnswer": "Vitamina D"
+    },
+    {
+      "id": 8,
+      "question": "¿Cuál es el principal neurotransmisor involucrado en la regulación del estado de ánimo?",
+      "options": [
+        "Dopamina",
+        "Serotonina",
+        "Acetilcolina",
+        "GABA"
+      ],
+      "correctAnswer": "Serotonina"
+    },
+    {
+      "id": 9,
+      "question": "¿Qué bacteria es responsable de causar la tuberculosis?",
+      "options": [
+        "Escherichia coli",
+        "Mycobacterium tuberculosis",
+        "Staphylococcus aureus",
+        "Streptococcus pneumoniae"
+      ],
+      "correctAnswer": "Mycobacterium tuberculosis"
+    },
+    {
+      "id": 10,
+      "question": "¿Qué órgano es afectado principalmente por la cirrosis?",
+      "options": [
+        "Pulmón",
+        "Hígado",
+        "Corazón",
+        "Riñón"
+      ],
+      "correctAnswer": "Hígado"
+    }
+  ]
