@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    color: black;
+    border: 1px black ;
+    border-style: dashed;
+
+    font-size: larger;
+
+}
