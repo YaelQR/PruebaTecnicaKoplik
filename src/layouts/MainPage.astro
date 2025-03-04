@@ -14,11 +14,29 @@ import '../styles/mainPage.css';
 	<body>
 
         <header> 
-
             <h1>Tema: Medicina</h1>
-
         </header>
 
-		<slot />
+        <section class="instructions">
+            Contesta el siguiente cuestionario para medir tus conocimientos en Medicina. <br>
+
+            Podras visualizar en que pregunta te encuentras con la barra de progreso y puedes pasar a la siguiente pregunta con el botón de siguiente.
+
+        </section>
+
+        <section class="preguntas">
+            <slot />
+        </section>
+
+        <section class="buttons">
+            <span>
+                <button>Siguiente</button>
+                <button>Anterior</button>
+            </span>
+            <button>Enviar</button>
+            
+
+        </section>
+		
 	</body>
 </html>

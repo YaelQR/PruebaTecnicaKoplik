@@ -1,12 +1,38 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 header{
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: center;
-    color: black;
+    color: #5D737E;
     border: 1px black ;
     border-style: dashed;
 
     font-size: larger;
 
+    background: #DAFFEF;
+}
+
+section{
+    border: 1px black dashed;
+    width: 80%;
+    margin: 10px auto;
+}
+
+section.instructions{
+
+}
+
+section.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button{
+    color: #5D737E;
+    background: #FCFFFD;
 }
