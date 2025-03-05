@@ -1,18 +1,20 @@
+import '../styles/pregunta.css'
 
-export function Pregunta({idPregunta,numeroPregunta,nombre,respuestas}:{idPregunta:number, numeroPregunta:number, nombre:String, respuestas:String[]}){
+export function Pregunta({idPregunta,numeroPregunta,enunciado,opciones}:{idPregunta:number, numeroPregunta:number, enunciado:string, opciones:string[]}){
     
     return(
 
         <article key={idPregunta}>
 
-            <h1 className="titulo">{numeroPregunta}</h1>
+            <label className="titulo-Pregunta">{enunciado}</label>
             {
-                // respuestas.map( 
-                    
-                // )    
+                opciones.map( opcion => {
+                    return (
+                        <input type="radio" key={opciones.indexOf(opcion)} name={'Pregunta'+idPregunta} value={opcion}>{opcion}</input>
+                    )
+                }
+                )    
             }
-            
-            
 
         </article>
 

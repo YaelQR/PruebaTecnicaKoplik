@@ -1,0 +1,19 @@
+
+
+section.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.boton{
+    border: 1px solid black;
+}
+
+div.navegacion-formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

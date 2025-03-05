@@ -1,5 +1,6 @@
 import { BarraProgreso } from "./BarraProgreso"
 import { SelectorPreguntas } from "./SelectorPreguntas"
+import { Formulario } from "./Formulario"
 
 import '../styles/seccion-Preguntas.css'
 
@@ -10,6 +11,7 @@ export function SeccionPreguntas(){
             
             <BarraProgreso progreso={8} total={10}/>
             <SelectorPreguntas/>
+            
 
         </section>
     )
