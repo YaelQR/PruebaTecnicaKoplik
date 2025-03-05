@@ -23,7 +23,7 @@ section{
 }
 
 section.instructions{
-
+    border-radius: 0px;
 }
 
 section.buttons{
@@ -35,4 +35,5 @@ section.buttons{
 button{
     color: #5D737E;
     background: #FCFFFD;
+    
 }

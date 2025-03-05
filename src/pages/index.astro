@@ -2,6 +2,9 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import MainPage from '../layouts/MainPage.astro';
+import { BarraProgreso } from '../components/BarraProgreso';
+import React from 'react';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -12,5 +15,5 @@ import MainPage from '../layouts/MainPage.astro';
 </Layout> -->
 
 <MainPage>
-
+	<BarraProgreso progreso={8} total={10} />
 </MainPage>
