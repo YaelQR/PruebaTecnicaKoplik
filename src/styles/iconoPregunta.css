@@ -1,0 +1,13 @@
+article.IconoPregunta{
+    width: 2.5vw;
+    height: 3vw;
+    border: 1px black solid;
+    background-color: #d8d8d8;
+    text-align: center;
+    align-content: center;
+}
+
+article.is-Answered{
+    background-color: #6fce8c;
+
+}

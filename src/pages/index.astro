@@ -3,7 +3,9 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import MainPage from '../layouts/MainPage.astro';
 import { BarraProgreso } from '../components/BarraProgreso';
+import {SelectorPreguntas} from '../components/SelectorPreguntas';
 import React from 'react';
+import {SeccionPreguntas} from '../components/SeccionPreguntas';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -15,5 +17,5 @@ import React from 'react';
 </Layout> -->
 
 <MainPage>
-	<BarraProgreso progreso={8} total={10} />
+	<SeccionPreguntas/>
 </MainPage>
