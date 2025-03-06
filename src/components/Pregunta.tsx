@@ -4,17 +4,23 @@ export function Pregunta({idPregunta,numeroPregunta,enunciado,opciones}:{idPregu
     
     return(
 
-        <article key={idPregunta}>
+        <article key={idPregunta} className='pregunta'>
 
-            <label className="titulo-Pregunta">{enunciado}</label>
-            {
-                opciones.map( opcion => {
-                    return (
-                        <input type="radio" key={opciones.indexOf(opcion)} name={'Pregunta'+idPregunta} value={opcion}>{opcion}</input>
-                    )
+            <label className="titulo-pregunta">{enunciado}</label>
+            <section className='seccion-respuestas'>
+                {
+                    opciones.map( opcion => {
+                        return (
+                            <>
+                                <input type="radio" key={'input'+opciones.indexOf(opcion)} name={String(idPregunta)} value={opcion} placeholder={opcion}></input>
+                                <label htmlFor="" key={'label'+opciones.indexOf(opcion)}>{opcion}</label> <br />
+                            </>
+                            
+                        )
+                    }
+                    )    
                 }
-                )    
-            }
+            </section>
 
         </article>
 

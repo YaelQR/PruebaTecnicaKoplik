@@ -6,3 +6,7 @@ export type PreguntaType = {
 }
 
 export type CuestionarioType = PreguntaType[];
+
+export type respuesta = [id:string,respuesta:string];
+
+export type respuestas = respuesta[];

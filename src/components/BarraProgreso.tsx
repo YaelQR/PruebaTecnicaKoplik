@@ -1,4 +1,3 @@
-import { number } from "astro:schema";
 import '../styles/barraProgreso.css';
 
 export function BarraProgreso({progreso, total} : {progreso:number, total:number}){

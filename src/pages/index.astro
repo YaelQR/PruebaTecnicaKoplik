@@ -6,6 +6,9 @@ import { BarraProgreso } from '../components/BarraProgreso';
 import {SelectorPreguntas} from '../components/SelectorPreguntas';
 import React from 'react';
 import {SeccionPreguntas} from '../components/SeccionPreguntas';
+import MyComponent from "../components/Mycomponent"
+import '../styles/seccion-Preguntas.css'
+
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -17,5 +20,10 @@ import {SeccionPreguntas} from '../components/SeccionPreguntas';
 </Layout> -->
 
 <MainPage>
-	<SeccionPreguntas/>
+	<!-- <section class="barraNavegacion">
+		<BarraProgreso progreso={8} total={10} client:load/>
+		<SelectorPreguntas client:load/>
+	</section> -->
+	<!-- <SeccionPreguntas client:load/> -->
+	<MyComponent client:load/>
 </MainPage>
