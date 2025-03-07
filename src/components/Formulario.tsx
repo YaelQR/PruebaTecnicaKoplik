@@ -3,9 +3,6 @@ import type {PreguntaType, CuestionarioType, retroalimentacion} from '../types/t
 import '../styles/formulario.css'
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { BarraProgreso } from '../components/BarraProgreso';
-import {SelectorPreguntas} from '../components/SelectorPreguntas';
-import { PreguntaRetro } from "./PreguntaRetro";
 import {Feedback} from "./Feedback"
 
 export function Formulario({preguntas}:{preguntas:CuestionarioType}){
