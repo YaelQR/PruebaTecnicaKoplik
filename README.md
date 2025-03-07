@@ -36,6 +36,9 @@ Despues de tener todos los pre-requisitos completos deberas realizar lo siguient
 - Una vez se manda las respuestas del usuario con el boton "Enviar Respuestas".
 - Cuando se envian las respuestas se mostran todas las preguntas con las respuestas elegidas por el usuario y la correcta, resaltando las preguntas en color verde las que fueron contestadas correctamente y en rojo las que se contestaron de forma incorrecta.
 
+### Posibles mejoras
+- 
+
 ### Diseño de los endpoints
 - Para el enpoint GetQuestions.json se utilizo un endopoint de tipo estatico, con una función GET que permitiera el acceso a las preguntas del cuestionario.
 - Para el endpoint feedback.json se utilizo un enpoint de tipo dinamico, con una función POST para validar las respuesta del usuario y dar retroalimentación de las respuestas que se tuvieron correctas o incorrectas.
