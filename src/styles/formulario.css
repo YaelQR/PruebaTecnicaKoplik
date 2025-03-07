@@ -8,8 +8,22 @@ section.botones{
     
 }
 
-section.boton{
+.boton{
+    margin-top: 20px;
+    margin-bottom: 30px;
     border: 1px solid black;
+    width: 40%;
+    height: 3.5vw;
+    font-size: 2vw;
+    border-radius: 10px;
+    background-color: #0B2962;
+    color: whitesmoke;
+    box-shadow: 5px 5px #85A8E9;
+}
+
+.alinear{
+    margin: 20px auto;
+    margin-left: 30%;
 }
 
 div.navegacion-formulario{

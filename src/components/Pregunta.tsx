@@ -12,8 +12,8 @@ export function Pregunta({idPregunta,numeroPregunta,enunciado,opciones}:{idPregu
                     opciones.map( opcion => {
                         return (
                             <>
-                                <input type="radio" key={'input'+opciones.indexOf(opcion)} name={String(idPregunta)} value={opcion} placeholder={opcion}></input>
-                                <label htmlFor="" key={'label'+opciones.indexOf(opcion)}>{opcion}</label> <br />
+                                <input type="radio" key={'input'+opciones.indexOf(opcion)} name={String(idPregunta)} value={opcion} placeholder={opcion} required className='opcion'></input>
+                                <label htmlFor="" key={'label'+opciones.indexOf(opcion)} className='opcion'>{opcion}</label> <br />
                             </>
                             
                         )

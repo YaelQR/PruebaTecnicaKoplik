@@ -1,55 +1,64 @@
 import {Pregunta} from "./Pregunta"
-import type {PreguntaType, CuestionarioType} from '../types/types'
+import type {PreguntaType, CuestionarioType, retroalimentacion} from '../types/types'
 import '../styles/formulario.css'
-import React, { useState, useEffect } from 'react';
+import { useState } from "react";
+import type { FormEvent } from "react";
 import { BarraProgreso } from '../components/BarraProgreso';
 import {SelectorPreguntas} from '../components/SelectorPreguntas';
+import { PreguntaRetro } from "./PreguntaRetro";
+import {Feedback} from "./Feedback"
 
 export function Formulario({preguntas}:{preguntas:CuestionarioType}){
+    
+    const [responseMessage, setResponseMessage] = useState("");
+    const [feedbackInfo, setfeedbackInfo] = useState<retroalimentacion[]>([]);
 
-    // const [respuestas, setRespuestas]:[respuestas:number[], setRespuestas:Function] = useState([])
-    // const [preguntaActual,setPreguntaActual] = useState(0)
+    async function submit(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const response = await fetch("/api/feedback.json", {
+        method: "POST",
+        body: formData,
+        });
+        const data = await response.json();
+        console.log(data.message)
+        if (data.message) {
+            setResponseMessage(data.message);
+            setfeedbackInfo(data.message);
+        }
+    }
 
-    // function sumarRespuesta(){
-    //     setRespuestas(respuestas.push(1))
-    //     console.log(respuestas.length)
-    // }
+    function reiniciar(){
+        setResponseMessage("");
+        setfeedbackInfo([]);
+    }
 
-    // console.log(respuestas.length)
 
     return(
         <>
-            {/* <BarraProgreso progreso={respuestas.length} total={preguntas.length}></BarraProgreso>
-            <SelectorPreguntas></SelectorPreguntas> */}
-            <form action="api/GetQuestions.json" className="formulario" method="POST">
+            {!responseMessage && 
+                <form onSubmit={submit} className="formulario" method="POST">
 
-                {
-                    preguntas.map( ({id,question,options,correctAnswer}) => {
-                            return(
-                                <Pregunta
-                                    key={id}
-                                    idPregunta={id}
-                                    numeroPregunta={id}
-                                    enunciado={question}
-                                    opciones={options}
-                                >
-                                </Pregunta>
-                            )
-                        }
-                    )
-                }
-
-                {/* <section className="botones">
-                <div className="navegacion-formulario">
-                        <button className="boton" value={"Anterior"} onClick={()=>sumarRespuesta()}>Anterior</button>
-                        <button className="boton" value={"Siguiente"}>Siguiente</button>
-                    </div>
-                    <button className="boton" value={"Enviar"}>Enviar</button>
-                </section> */}
-
-                <input type="submit" value="Verificar Respuestas" />
-
-            </form>
+                    {
+                        preguntas.map( ({id,question,options,correctAnswer}) => {
+                                return(
+                                    <Pregunta
+                                        key={id}
+                                        idPregunta={id}
+                                        numeroPregunta={id}
+                                        enunciado={question}
+                                        opciones={options}
+                                    >
+                                    </Pregunta>
+                                )
+                            }
+                        )
+                    }
+                    <input type="submit" value="Enviar Respuestas" className="boton"/>
+                </form>
+            }
+            {responseMessage && feedbackInfo && <Feedback feedback={feedbackInfo}/>}
+            {responseMessage && feedbackInfo && <button onClick={reiniciar} className="boton alinear">Reiniciar</button>}
         </>
         
     )

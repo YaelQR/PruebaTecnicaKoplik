@@ -1,0 +1,35 @@
+article.pregunta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-weight:normal;
+    font-size: medium;
+    border-top: 3px #85A8E9 solid;
+
+    padding-top: 1vw;
+}
+
+h4.pregunta{
+    text-align: start;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin: 10px 0px;
+}
+
+p.retroalimentacion{
+    line-height: 1;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.isCorrect{
+    background-color: #9EFFAD;
+}
+
+.isnotCorrect{
+    background-color: #FF9191;
+}
