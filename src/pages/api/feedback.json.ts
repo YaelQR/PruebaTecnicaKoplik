@@ -1,11 +1,12 @@
 import type {APIRoute} from "astro";
 import questions from '../../../public/data/questions.json'
 import type { respuestas,respuesta,retroalimentacion } from "../../types/types";
-import { string } from "astro:schema";
 
 export const prerender = false;
 
+// Es un endpoint de tipo dinámico, se utiliza la petición POST para recibir las respuestas del cuestionario.
 export const POST: APIRoute = async({request}) => {
+    // Se le da un formato de formData a la prop recibida
     const data = await request.formData();
 
     let correctas:number = 0;
@@ -13,19 +14,6 @@ export const POST: APIRoute = async({request}) => {
     let correctAnswer: string ="";
     let isAnswered: boolean = true;
     let retro: retroalimentacion[] = [];
-
-    if(data === null){
-        console.log("nulo")
-    }
-
-    for(let res of data.entries()){
-        
-        if(questions.at(parseInt(res[0])-1)?.correctAnswer === null){
-            console.log("undefined");
-            isAnswered = false;
-            break;
-        }
-    }
     
     if(!isAnswered){
         return new Response(
@@ -42,6 +30,7 @@ export const POST: APIRoute = async({request}) => {
     let correcta:string="";
     let isCorrect:boolean;
 
+    // Se crea un arreglo de tipos retroalimentacion
     for(let res of data.entries()){
         id = parseInt(res[0]);
         pregunta = questions.at(parseInt(res[0])-1)?.question ?? "";
@@ -63,10 +52,9 @@ export const POST: APIRoute = async({request}) => {
             isCorrect
         });
             
-    }
+    }  
 
-    console.log(retro);   
-
+    // Se regresa el arreglo de tipo retroalimentación como JSON
     return new Response(
         JSON.stringify({
             message: retro

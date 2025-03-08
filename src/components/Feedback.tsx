@@ -4,8 +4,10 @@ import '../styles/formulario.css'
 import '../styles/feedback.css'
 import { PreguntaRetro } from "./PreguntaRetro";
 
+// Se utiliza la interfaz de retroalimentacion para especificar la estructura de las props.
 export function Feedback({feedback}:{feedback:retroalimentacion[]}){
     
+    // Se obtienen el número de respuestas correctas para mostrarle al usuario su resultado.
     let correctas: number = 0;
     for(let i=0; i<feedback.length; i++){
         if(feedback.at(i)?.isCorrect){
@@ -13,6 +15,7 @@ export function Feedback({feedback}:{feedback:retroalimentacion[]}){
         }
     }
 
+    // Se utiliza una función map para mandar toda la información de la prop en un tipo PreguntaRetro.
     return(
        <section className="feedback">
 
